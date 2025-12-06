@@ -18,7 +18,7 @@ We will take a task ID returned by the Nano Banana Images API as an example to d
 
 **Request Headers** include:
 
-- `accept`: Specifies that the response result should be in JSON format, set to `application/json`.
+- `accept`: Specifies that the response should be in JSON format, set to `application/json`.
 - `authorization`: The key for calling the API, which can be selected directly after application.
 
 **Request Body** includes:
@@ -201,4 +201,4 @@ When calling the API, if an error occurs, the API will return the corresponding 
 
 ## Conclusion
 
-Through this document, you have learned how to use the Nano Banana Tasks API to query all specific details of single or batch tasks. We hope this document helps you better integrate and use the API. If you have any questions, please feel free to contact our technical support team.
+Through this document, you have learned how to use the Nano Banana Tasks API to query details for single or batch tasks. We hope this document helps you better integrate and use the API. If you have any questions, please feel free to contact our technical support team.
