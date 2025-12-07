@@ -82,7 +82,7 @@ print(resp.json())
 
 ### Field Description
 
-- `success`: Whether the request was successful.
+- `success`: Indicates whether the request was successful.
 - `task_id`: Task ID.
 - `trace_id`: Trace ID for troubleshooting.
 - `data[]`: Result list.
@@ -167,7 +167,7 @@ Generation or editing may take some time. To avoid long connections occupying re
 2. The API will **immediately return** a response containing `task_id` (or basic results).
 3. When the task is completed, the platform will send the complete JSON to `callback_url` via `POST`. You can associate the request with the result using `task_id`.
 
-**Callback payload example** (field structure is consistent with synchronous success return):
+**Callback Payload Example** (field structure is consistent with synchronous success return):
 
 ```json
 {
