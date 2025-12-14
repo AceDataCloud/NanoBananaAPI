@@ -4,9 +4,9 @@ This document introduces the integration and usage of the Nano Banana Images API
 
 ## Application Process
 
-Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free quotas available. Once activated, you can obtain a Bearer Token for API calls on the platform.
+Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free credits available. Once activated, you can obtain the Bearer Token for API calls on the platform.
 
-## Interface Overview
+## API Overview
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
@@ -15,8 +15,8 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
   - `accept: application/json`
   - `content-type: application/json`
 - **Action**:
-  - `generate`: Generate images based on text prompts
-  - `edit`: Edit based on given images
+  - `generate`: Generate an image based on text prompts
+  - `edit`: Edit based on a given image
 - **Asynchronous Callback**: Optional, receive task completion notifications and results via `callback_url`
 
 ## Quick Start: Generate Image (`action=generate`)
@@ -80,13 +80,13 @@ print(resp.json())
 }
 ```
 
-### Field Description
+### Field Descriptions
 
 - `success`: Indicates whether the request was successful.
 - `task_id`: Task ID.
-- `trace_id`: Trace ID for troubleshooting.
+- `trace_id`: Trace ID for tracking issues.
 - `data[]`: Result list.
-  - `prompt`: The prompt used for generation (echo).
+  - `prompt`: The prompt used for generation (echoed).
   - `image_url`: Direct URL of the generated image.
 
 > Note: Only `action` and `prompt` are required to generate an image at `/nano-banana/images`.
@@ -153,7 +153,7 @@ print(resp.json())
 }
 ```
 
-### Field Description
+### Field Descriptions
 
 - `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be passed, and the service will combine these materials with the `prompt` to complete the editing.
 - Other fields are the same as the "Generate Image" response.
@@ -210,7 +210,7 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 
 ---
 
-## Parameter Correspondence and Notes
+## Parameter Mapping and Notes
 
 - **Required**: `action`, `prompt`
 - **Edit Only**: `image_urls` (array, at least 1 item)

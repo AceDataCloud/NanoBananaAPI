@@ -11,9 +11,9 @@ This document introduces the integration and usage of the Nano Banana Images API
 
 ### Application Process
 
-Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free quotas available. Once activated, you can obtain a Bearer Token for API calls on the platform.
+Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free credits available. Once activated, you can obtain the Bearer Token for API calls on the platform.
 
-### Interface Overview
+### API Overview
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
@@ -22,8 +22,8 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
   - `accept: application/json`
   - `content-type: application/json`
 - **Action**:
-  - `generate`: Generate images based on text prompts
-  - `edit`: Edit based on given images
+  - `generate`: Generate an image based on text prompts
+  - `edit`: Edit based on a given image
 - **Asynchronous Callback**: Optional, receive task completion notifications and results via `callback_url`
 
 ### Quick Start: Generate Image (`action=generate`)
