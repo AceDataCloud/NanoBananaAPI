@@ -8,7 +8,7 @@ This document will provide detailed integration instructions for the Nano Banana
 
 The Nano Banana Tasks API can be used to query the results of the Nano Banana Images API. For information on how to use the Nano Banana Images API, please refer to the document [Nano Banana Images API](https://platform.acedata.cloud/documents/63e01dc3-eb21-499e-8049-3025c460058f).
 
-We will take a task ID returned by the Nano Banana Images API service as an example to demonstrate how to use this API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, and we will demonstrate how to pass in a task ID.
+We will take a task ID returned by the Nano Banana Images API as an example to demonstrate how to use this API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, and we will demonstrate how to pass in a task ID.
 
 ### Task Example Image
 
