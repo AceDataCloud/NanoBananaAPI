@@ -167,7 +167,7 @@ Generation or editing may take some time. To avoid long connections occupying re
 2. The API will **immediately return** a response containing `task_id` (or basic results).
 3. When the task is completed, the platform will send the complete JSON to `callback_url` via `POST`. You can associate the request with the result using `task_id`.
 
-**Callback Payload Example** (field structure is consistent with synchronous success return):
+**Callback payload example** (field structure is consistent with synchronous success return):
 
 ```json
 {
@@ -210,7 +210,7 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 
 ---
 
-## Parameter Mapping and Notes
+## Parameter Correspondence and Notes
 
 - **Required**: `action`, `prompt`
 - **Edit Only**: `image_urls` (array, at least 1 item)
