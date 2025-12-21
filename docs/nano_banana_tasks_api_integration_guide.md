@@ -6,9 +6,9 @@ This document will provide detailed integration instructions for the Nano Banana
 
 ## Request Example
 
-The Nano Banana Tasks API can be used to query the results of the Nano Banana Images API. For information on how to use the Nano Banana Images API, please refer to the document [Nano Banana Images API](https://platform.acedata.cloud/documents/63e01dc3-eb21-499e-8049-3025c460058f).
+The Nano Banana Tasks API can be used to query the results of the Nano Banana Images API. For information on how to use the Nano Banana Images API, please refer to the documentation [Nano Banana Images API](https://platform.acedata.cloud/documents/63e01dc3-eb21-499e-8049-3025c460058f).
 
-We will take a task ID returned by the Nano Banana Images API as an example to demonstrate how to use this API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, and we will demonstrate how to pass in a task ID.
+We will demonstrate how to use this API with an example task ID returned by the Nano Banana Images API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, we will show how to pass in a task ID.
 
 ### Task Example Image
 
@@ -18,7 +18,7 @@ We will take a task ID returned by the Nano Banana Images API as an example to d
 
 **Request Headers** include:
 
-- `accept`: Specifies that the response result should be in JSON format, set to `application/json`.
+- `accept`: Specifies that the response should be in JSON format, set to `application/json`.
 - `authorization`: The key for calling the API, which can be selected directly after application.
 
 **Request Body** includes:
@@ -32,7 +32,7 @@ Set as shown in the image below:
 
 ### Code Example
 
-It can be seen that various language codes have been automatically generated on the right side of the page, as shown in the image:
+You can see that various language codes have been automatically generated on the right side of the page, as shown in the image:
 
 <p><img src="https://cdn.acedata.cloud/r1u4vl.png" width="500" class="m-auto"></p>
 
@@ -75,7 +75,7 @@ print(response.text)
 
 ### Response Example
 
-Upon successful request, the API will return the detailed information of the task here. For example:
+Upon successful request, the API will return the details of the task here. For example:
 
 ```json
 {
@@ -172,7 +172,7 @@ Upon successful request, the API will return the specific details of all batch t
 }
 ```
 
-The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields mentioned above. The field information is as follows.
+The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields in the previous single task query. The field information is as follows.
 
 - `items`: All specific details of the batch tasks. It is an array, and each element of the array has the same format as the return result of querying a single task.
 - `count`: The number of tasks in this batch query.
