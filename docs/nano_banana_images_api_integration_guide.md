@@ -4,17 +4,17 @@ This document introduces the integration and usage of the Nano Banana Images API
 
 ## Application Process
 
-Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free credits available. Once activated, you can obtain the Bearer Token for API calls on the platform.
+Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free quotas available. Once activated, you can obtain the Bearer Token used to call the API from the platform.
 
 ## Interface Overview
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
-- **Authentication Method**: Include `authorization: Bearer {token}` in the HTTP Header
+- **Authentication Method**: Carry `authorization: Bearer {token}` in the HTTP Header
 - **Request Headers**:
   - `accept: application/json`
   - `content-type: application/json`
-- **Action**:
+- **Actions**:
   - `generate`: Generate images based on text prompts
   - `edit`: Edit based on given images
 - **Asynchronous Callback**: Optional, receive task completion notifications and results via `callback_url`
@@ -82,18 +82,18 @@ print(resp.json())
 
 ### Field Explanation
 
-- `success`: Indicates whether the request was successful.
+- `success`: Whether the request was successful.
 - `task_id`: Task ID.
 - `trace_id`: Trace ID for troubleshooting.
 - `data[]`: Result list.
-  - `prompt`: The prompt used for generation (echoed).
+  - `prompt`: The prompt used for generation (echo).
   - `image_url`: Direct URL of the generated image.
 
 > Note: Only `action` and `prompt` are required to generate an image at `/nano-banana/images`.
 
 ## Edit Image (`action=edit`)
 
-When you want to edit an existing image, set `action` to `edit` and provide a list of image URLs to be edited (one or more) through `image_urls`, along with a `prompt` describing the editing goal.
+When you want to edit an existing image, set `action` to `edit`, and pass the list of image URLs to be edited through `image_urls` (one or more), while also providing a `prompt` describing the editing goal.
 
 For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be HTTP URLs, publicly accessible links using `https` or `http`, or Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
@@ -155,7 +155,7 @@ print(resp.json())
 
 ### Field Explanation
 
-- `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be provided, and the service will combine these materials with the `prompt` to complete the editing.
+- `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be passed, and the service will combine these materials with the `prompt` to complete the editing.
 - Other fields are the same as the "Generate Image" response.
 
 ---
@@ -167,7 +167,7 @@ Generation or editing may take some time. To avoid long connections occupying re
 2. The API will **immediately return** a response containing `task_id` (or basic results).
 3. When the task is completed, the platform will send the complete JSON to `callback_url` via `POST`. You can associate the request with the result using `task_id`.
 
-**Callback Payload Example** (field structure is consistent with synchronous success return):
+**Callback payload example** (field structure is consistent with synchronous success return):
 
 ```json
 {
@@ -195,7 +195,7 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 - **429 `too_many_requests`**: Request frequency limit exceeded.
 - **500 `api_error`**: Server exception.
 
-### Error Response Example
+### Error response example
 
 ```json
 {
@@ -213,8 +213,8 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 ## Parameter Correspondence and Notes
 
 - **Required**: `action`, `prompt`
-- **Edit Only**: `image_urls` (array, at least 1 item)
+- **Edit only**: `image_urls` (array, at least 1 item)
 - **Optional**: `callback_url` (for asynchronous callback)
 - **Headers**: Must provide `authorization: Bearer {token}`; `accept` is recommended to be set to `application/json`
-- **Image Accessibility**: `image_urls` must be direct links accessible publicly (HTTP/HTTPS), HTTPS is recommended
-- **Idempotency and Tracking**: Retain `task_id` and `trace_id` for troubleshooting and result association.
+- **Image accessibility**: `image_urls` must be direct links accessible publicly (HTTP/HTTPS), HTTPS is recommended
+- **Idempotency and tracing**: Retain `task_id` and `trace_id` for troubleshooting and result association
