@@ -6,7 +6,7 @@ This document introduces the integration and usage of the Nano Banana Images API
 
 Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free credits available. Once activated, you can obtain the Bearer Token for API calls on the platform.
 
-## API Overview
+## Interface Overview
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
@@ -15,8 +15,8 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
   - `accept: application/json`
   - `content-type: application/json`
 - **Action**:
-  - `generate`: Generate an image based on text prompts
-  - `edit`: Edit based on a given image
+  - `generate`: Generate images based on text prompts
+  - `edit`: Edit based on given images
 - **Asynchronous Callback**: Optional, receive task completion notifications and results via `callback_url`
 
 ## Quick Start: Generate Image (`action=generate`)
@@ -80,11 +80,11 @@ print(resp.json())
 }
 ```
 
-### Field Descriptions
+### Field Explanation
 
 - `success`: Indicates whether the request was successful.
 - `task_id`: Task ID.
-- `trace_id`: Trace ID for tracking issues.
+- `trace_id`: Trace ID for troubleshooting.
 - `data[]`: Result list.
   - `prompt`: The prompt used for generation (echoed).
   - `image_url`: Direct URL of the generated image.
@@ -93,7 +93,7 @@ print(resp.json())
 
 ## Edit Image (`action=edit`)
 
-When you want to edit an existing image, set `action` to `edit` and pass a list of image URLs to be edited via `image_urls` (one or more), while also providing a `prompt` describing the editing goal.
+When you want to edit an existing image, set `action` to `edit` and provide a list of image URLs to be edited (one or more) through `image_urls`, along with a `prompt` describing the editing goal.
 
 For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be HTTP URLs, publicly accessible links using `https` or `http`, or Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
@@ -153,9 +153,9 @@ print(resp.json())
 }
 ```
 
-### Field Descriptions
+### Field Explanation
 
-- `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be passed, and the service will combine these materials with the `prompt` to complete the editing.
+- `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be provided, and the service will combine these materials with the `prompt` to complete the editing.
 - Other fields are the same as the "Generate Image" response.
 
 ---
@@ -167,7 +167,7 @@ Generation or editing may take some time. To avoid long connections occupying re
 2. The API will **immediately return** a response containing `task_id` (or basic results).
 3. When the task is completed, the platform will send the complete JSON to `callback_url` via `POST`. You can associate the request with the result using `task_id`.
 
-**Callback payload example** (field structure is consistent with synchronous success return):
+**Callback Payload Example** (field structure is consistent with synchronous success return):
 
 ```json
 {
@@ -191,7 +191,7 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 
 - **400 `token_mismatched`**: The request is illegal or parameters are incorrect.
 - **400 `api_not_implemented`**: The interface is not implemented (please contact support).
-- **401 `invalid_token`**: Authentication failed or Token is missing.
+- **401 `invalid_token`**: Authentication failed or token is missing.
 - **429 `too_many_requests`**: Request frequency limit exceeded.
 - **500 `api_error`**: Server exception.
 
