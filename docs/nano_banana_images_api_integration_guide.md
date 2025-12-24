@@ -93,7 +93,7 @@ print(resp.json())
 
 ## Edit Image (`action=edit`)
 
-When you want to edit an existing image, set `action` to `edit`, and pass the list of image URLs to be edited through `image_urls` (one or more), while also providing a `prompt` describing the editing goal.
+When you want to edit based on an existing image, set `action` to `edit` and pass the list of image URLs to be edited through `image_urls` (one or more), while also providing a `prompt` describing the editing goal.
 
 For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be HTTP URLs, publicly accessible links using `https` or `http`, or Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
@@ -195,7 +195,7 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 - **429 `too_many_requests`**: Request frequency limit exceeded.
 - **500 `api_error`**: Server exception.
 
-### Error response example
+### Error Response Example
 
 ```json
 {
@@ -213,8 +213,8 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 ## Parameter Correspondence and Notes
 
 - **Required**: `action`, `prompt`
-- **Edit only**: `image_urls` (array, at least 1 item)
+- **Edit Only**: `image_urls` (array, at least 1 item)
 - **Optional**: `callback_url` (for asynchronous callback)
 - **Headers**: Must provide `authorization: Bearer {token}`; `accept` is recommended to be set to `application/json`
-- **Image accessibility**: `image_urls` must be direct links accessible publicly (HTTP/HTTPS), HTTPS is recommended
-- **Idempotency and tracing**: Retain `task_id` and `trace_id` for troubleshooting and result association
+- **Image Accessibility**: `image_urls` must be direct links accessible publicly (HTTP/HTTPS), HTTPS is recommended
+- **Idempotency and Tracking**: Retain `task_id` and `trace_id` for troubleshooting and result association.
