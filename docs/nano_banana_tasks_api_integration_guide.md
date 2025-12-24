@@ -6,9 +6,9 @@ This document will provide detailed integration instructions for the Nano Banana
 
 ## Request Example
 
-The Nano Banana Tasks API can be used to query the results of the Nano Banana Images API. For information on how to use the Nano Banana Images API, please refer to the document [Nano Banana Images API](https://platform.acedata.cloud/documents/63e01dc3-eb21-499e-8049-3025c460058f).
+The Nano Banana Tasks API can be used to query the results of the Nano Banana Images API. For information on how to use the Nano Banana Images API, please refer to the documentation [Nano Banana Images API](https://platform.acedata.cloud/documents/63e01dc3-eb21-499e-8049-3025c460058f).
 
-We will take a task ID returned by the Nano Banana Images API as an example to demonstrate how to use this API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, and we will demonstrate how to pass in a task ID.
+We will demonstrate how to use this API with an example task ID returned by the Nano Banana Images API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, we will show how to pass in a task ID.
 
 ### Task Example Image
 
@@ -18,7 +18,7 @@ We will take a task ID returned by the Nano Banana Images API as an example to d
 
 **Request Headers** include:
 
-- `accept`: Specifies that the response result should be in JSON format, set to `application/json`.
+- `accept`: Specifies that the response should be in JSON format, set to `application/json`.
 - `authorization`: The key for calling the API, which can be selected directly after application.
 
 **Request Body** includes:
@@ -32,7 +32,7 @@ Set as shown in the image below:
 
 ### Code Example
 
-It can be seen that various language codes have been automatically generated on the right side of the page, as shown in the image:
+You can see that various language codes have been automatically generated on the right side of the page, as shown in the image:
 
 <p><img src="https://cdn.acedata.cloud/r1u4vl.png" width="500" class="m-auto"></p>
 
@@ -75,7 +75,7 @@ print(response.text)
 
 ### Response Example
 
-Upon successful request, the API will return the detailed information of the task here. For example:
+Upon successful request, the API will return the details of the task here. For example:
 
 ```json
 {
@@ -114,7 +114,7 @@ The returned result contains multiple fields, where the request field is the req
 
 ## Batch Query Operation
 
-This is for querying the details of multiple task IDs, and unlike the above, the action needs to be selected as `retrieve_batch`.
+This is for querying task details for multiple task IDs, differing from the above in that the action needs to be selected as `retrieve_batch`.
 
 **Request Body** includes:
 
@@ -136,7 +136,7 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/tasks' \
 
 ### Response Example
 
-Upon successful request, the API will return the specific details of all batch tasks this time. For example:
+Upon successful request, the API will return the specific details of all batch tasks. For example:
 
 ```json
 {
@@ -201,4 +201,4 @@ When calling the API, if an error occurs, the API will return the corresponding 
 
 ## Conclusion
 
-Through this document, you have learned how to use the Nano Banana Tasks API to query details of single or batch tasks. We hope this document helps you better integrate and use the API. If you have any questions, please feel free to contact our technical support team.
+Through this document, you have learned how to use the Nano Banana Tasks API to query details for single or batch tasks. We hope this document helps you better integrate and use the API. If you have any questions, please feel free to contact our technical support team.
