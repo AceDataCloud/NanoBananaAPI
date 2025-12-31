@@ -32,7 +32,7 @@ Set as shown in the image below:
 
 ### Code Example
 
-You can see that various language codes have been automatically generated on the right side of the page, as shown in the image:
+It can be seen that various language codes have been automatically generated on the right side of the page, as shown in the image:
 
 <p><img src="https://cdn.acedata.cloud/r1u4vl.png" width="500" class="m-auto"></p>
 
@@ -75,7 +75,7 @@ print(response.text)
 
 ### Response Example
 
-Upon successful request, the API will return the details of the task here. For example:
+Upon successful request, the API will return the detailed information of the task here. For example:
 
 ```json
 {
@@ -108,7 +108,7 @@ Upon successful request, the API will return the details of the task here. For e
 
 The returned result contains multiple fields, where the request field is the request body when the task was initiated, and the response field is the response body returned after the task is completed. The field descriptions are as follows.
 
-- `id`: The ID generated for this task, used to uniquely identify this generation task.
+- `id`: The ID of the generated task, used to uniquely identify this generation task.
 - `request`: The request information in the task query.
 - `response`: The return information in the task query.
 
@@ -172,9 +172,9 @@ Upon successful request, the API will return the specific details of all batch t
 }
 ```
 
-The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields mentioned above. The field information is as follows.
+The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields above for querying a single task. The field information is as follows.
 
-- `items`: All specific details of the batch tasks. It is an array, and each element of the array has the same format as the return result of querying a single task.
+- `items`: All specific details of the batch tasks. It is an array, and each element of the array has the same format as the return result for querying a single task.
 - `count`: The number of tasks in this batch query.
 ## Error Handling
 
