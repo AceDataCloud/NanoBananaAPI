@@ -17,13 +17,13 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
-- **Authentication Method**: Include `authorization: Bearer {token}` in the HTTP Header
+- **Authentication Method**: Carry `authorization: Bearer {token}` in the HTTP Header
 - **Request Headers**:
   - `accept: application/json`
   - `content-type: application/json`
-- **Action**:
-  - `generate`: Generate an image based on text prompts
-  - `edit`: Edit based on a given image
+- **Actions**:
+  - `generate`: Generate images based on text prompts
+  - `edit`: Edit based on given images
 - **Asynchronous Callback**: Optional, receive task completion notifications and results via `callback_url`
 
 ### Quick Start: Generate Image (`action=generate`)
