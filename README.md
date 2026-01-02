@@ -13,11 +13,11 @@ This document introduces the integration and usage of the Nano Banana Images API
 
 Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free quotas available. Once activated, you can obtain the Bearer Token used to call the API from the platform.
 
-### Interface Overview
+### API Overview
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
-- **Authentication Method**: Carry `authorization: Bearer {token}` in the HTTP Header
+- **Authentication Method**: Include `authorization: Bearer {token}` in the HTTP Header
 - **Request Headers**:
   - `accept: application/json`
   - `content-type: application/json`
