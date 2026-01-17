@@ -10,7 +10,7 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
-- **Authentication Method**: Include `authorization: Bearer {token}` in the HTTP Header
+- **Authentication Method**: Carry `authorization: Bearer {token}` in the HTTP Header
 - **Request Headers**:
   - `accept: application/json`
   - `content-type: application/json`
@@ -156,7 +156,7 @@ print(resp.json())
 ### Field Explanation
 
 - `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be passed, and the service will combine these materials with the `prompt` to complete the editing.
-- Other fields are the same as those returned for "Generate Image".
+- Other fields are the same as the "Generate Image" response.
 
 ---
 
@@ -167,7 +167,7 @@ Generation or editing may take some time. To avoid long connections occupying re
 2. The API will **immediately return** a response containing `task_id` (or basic results).
 3. When the task is completed, the platform will send the complete JSON to `callback_url` via `POST`. You can associate the request with the result using `task_id`.
 
-**Callback payload example** (field structure is consistent with synchronous success return):
+**Callback Payload Example** (field structure is consistent with synchronous success return):
 
 ```json
 {
@@ -195,7 +195,7 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 - **429 `too_many_requests`**: Request frequency limit exceeded.
 - **500 `api_error`**: Server exception.
 
-### Error response example
+### Error Response Example
 
 ```json
 {
@@ -213,8 +213,8 @@ When the call fails, a standard error format and trace ID will be returned. Comm
 ## Parameter Correspondence and Notes
 
 - **Required**: `action`, `prompt`
-- **Edit only**: `image_urls` (array, at least 1 item)
+- **Edit Only**: `image_urls` (array, at least 1 item)
 - **Optional**: `callback_url` (for asynchronous callback)
 - **Headers**: Must provide `authorization: Bearer {token}`; `accept` is recommended to be set to `application/json`
-- **Image accessibility**: `image_urls` must be direct links accessible publicly (HTTP/HTTPS), HTTPS is recommended
-- **Idempotency and tracing**: Retain `task_id` and `trace_id` for troubleshooting and result association.
+- **Image Accessibility**: `image_urls` must be direct links accessible publicly (HTTP/HTTPS), HTTPS is recommended
+- **Idempotency and Tracking**: Retain `task_id` and `trace_id` for troubleshooting and result association.

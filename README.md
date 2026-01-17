@@ -17,7 +17,7 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
-- **Authentication Method**: Include `authorization: Bearer {token}` in the HTTP Header
+- **Authentication Method**: Carry `authorization: Bearer {token}` in the HTTP Header
 - **Request Headers**:
   - `accept: application/json`
   - `content-type: application/json`
