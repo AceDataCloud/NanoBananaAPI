@@ -32,7 +32,7 @@ Set as shown in the image below:
 
 ### Code Example
 
-You can see that various language codes have been automatically generated on the right side of the page, as shown in the image:
+It can be seen that various language codes have been automatically generated on the right side of the page, as shown in the image:
 
 <p><img src="https://cdn.acedata.cloud/r1u4vl.png" width="500" class="m-auto"></p>
 
@@ -114,7 +114,7 @@ The returned result contains multiple fields, where the request field is the req
 
 ## Batch Query Operation
 
-This is for querying task details for multiple task IDs, differing from the above in that the action needs to be selected as `retrieve_batch`.
+This is for querying task details for multiple task IDs, and unlike above, the action needs to be selected as `retrieve_batch`.
 
 **Request Body** includes:
 
