@@ -19,7 +19,7 @@ We will demonstrate how to use this API with an example task ID returned by the 
 **Request Headers** include:
 
 - `accept`: Specifies that the response should be in JSON format, set to `application/json`.
-- `authorization`: The key to call the API, which can be selected directly after application.
+- `authorization`: The key for calling the API, which can be selected directly after application.
 
 **Request Body** includes:
 
@@ -32,7 +32,7 @@ Set as shown in the image below:
 
 ### Code Example
 
-You can see that various language codes have been automatically generated on the right side of the page, as shown in the image:
+It can be seen that various language codes have been automatically generated on the right side of the page, as shown in the image:
 
 <p><img src="https://cdn.acedata.cloud/r1u4vl.png" width="500" class="m-auto"></p>
 
@@ -136,7 +136,7 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/tasks' \
 
 ### Response Example
 
-Upon successful request, the API will return the specific details of all batch tasks this time. For example:
+Upon successful request, the API will return the specific details of all batch tasks. For example:
 
 ```json
 {
@@ -172,7 +172,7 @@ Upon successful request, the API will return the specific details of all batch t
 }
 ```
 
-The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields in the previous single task query. The field information is as follows.
+The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields mentioned above. The field information is as follows.
 
 - `items`: All specific details of the batch tasks. It is an array, and each element of the array has the same format as the return result of querying a single task.
 - `count`: The number of tasks in this batch query.
