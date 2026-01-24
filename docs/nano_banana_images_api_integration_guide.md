@@ -33,7 +33,8 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/images' \
   -H 'content-type: application/json' \
   -d '{
     "action": "generate",
-    "prompt": "A photorealistic close-up portrait of an elderly Japanese ceramicist with deep, sun-etched wrinkles and a warm, knowing smile. He is carefully inspecting a freshly glazed tea bowl. The setting is his rustic, sun-drenched workshop. The scene is illuminated by soft, golden hour light streaming through a window, highlighting the fine texture of the clay. Captured with an 85mm portrait lens, resulting in a soft, blurred background (bokeh). The overall mood is serene and masterful. Vertical portrait orientation."
+    "prompt": "A photorealistic close-up portrait of an elderly Japanese ceramicist with deep, sun-etched wrinkles and a warm, knowing smile. He is carefully inspecting a freshly glazed tea bowl. The setting is his rustic, sun-drenched workshop. The scene is illuminated by soft, golden hour light streaming through a window, highlighting the fine texture of the clay. Captured with an 85mm portrait lens, resulting in a soft, blurred background (bokeh). The overall mood is serene and masterful. Vertical portrait orientation.",
+    "count": 1
   }'
 ```
 
@@ -59,6 +60,7 @@ payload = {
         "portrait lens, resulting in a soft, blurred background (bokeh). The overall mood "
         "is serene and masterful. Vertical portrait orientation."
     ),
+    "count": 1
 }
 resp = requests.post(url, json=payload, headers=headers)
 print(resp.json())
@@ -93,7 +95,7 @@ print(resp.json())
 
 ## Edit Image (`action=edit`)
 
-When you want to edit an existing image, set `action` to `edit` and provide a list of image URLs to be edited (one or more) through `image_urls`, along with a `prompt` describing the editing goal.
+When you want to edit an existing image, set `action` to `edit` and provide a list of image URLs to be edited via `image_urls` (one or more), along with a `prompt` describing the editing goal.
 
 For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be HTTP URLs, publicly accessible links using `https` or `http`, or Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
@@ -110,7 +112,8 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/images' \
     "image_urls": [
       "https://cdn.acedata.cloud/v8073y.png",
       "https://cdn.acedata.cloud/44xlah.png"
-    ]
+    ],
+    "count": 1
   }'
 ```
 
@@ -131,7 +134,8 @@ payload = {
     "image_urls": [
         "https://cdn.acedata.cloud/v8073y.png",
         "https://cdn.acedata.cloud/44xlah.png"
-    ]
+    ],
+    "count": 1
 }
 resp = requests.post(url, json=payload, headers=headers)
 print(resp.json())
@@ -155,14 +159,14 @@ print(resp.json())
 
 ### Field Explanation
 
-- `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be passed, and the service will combine these materials with the `prompt` to complete the editing.
-- Other fields are the same as those returned for "Generate Image".
+- `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be provided, and the service will combine these materials with the `prompt` to complete the editing.
+- Other fields are the same as the "Generate Image" response.
 
 ---
 
 ## Asynchronous Callback (Optional, Recommended)
 
-Generation or editing may take some time. To avoid long connections occupying resources, it is recommended to use **Webhook Callback** via `callback_url`:
+Generation or editing may take some time. To avoid long connections occupying resources, it is recommended to use **Webhook callbacks** via `callback_url`:
 1. Add `callback_url` in the request body, for example, your server's Webhook address (must be publicly accessible and support POST JSON).
 2. The API will **immediately return** a response containing `task_id` (or basic results).
 3. When the task is completed, the platform will send the complete JSON to `callback_url` via `POST`. You can associate the request with the result using `task_id`.
