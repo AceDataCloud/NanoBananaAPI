@@ -6,7 +6,7 @@ This document introduces the integration and usage of the Nano Banana Images API
 
 Before use, please enter the [Nano Banana Images API](https://platform.acedata.cloud/documents/23985a11-d713-41d1-ad84-24b021805b3d) on the Ace Data Cloud platform and click Acquire to apply for activation. The first application usually has free quotas available. Once activated, you can obtain the Bearer Token used to call the API from the platform.
 
-## Interface Overview
+## API Overview
 
 - **Base URL**: `https://api.acedata.cloud`
 - **Endpoint**: `POST /nano-banana/images`
@@ -93,9 +93,9 @@ print(resp.json())
 
 ## Edit Image (`action=edit`)
 
-When you want to edit an existing image, set `action` to `edit` and pass the list of image URLs to be edited through `image_urls` (one or more), while also providing a `prompt` describing the editing goal.
+When you want to edit an existing image, set `action` to `edit` and pass a list of image URLs to be edited through `image_urls` (one or more), while also providing a `prompt` describing the editing goal.
 
-For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be HTTP URLs, publicly accessible links using `https` or `http`, or Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
+For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear the shirt by passing the image URLs and specifying the action as `edit`. The URLs can be HTTP URLs, publicly accessible links using `https` or `http`, or Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
 ### Request Example (cURL)
 
