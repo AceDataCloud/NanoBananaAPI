@@ -8,7 +8,7 @@ This document will provide detailed integration instructions for the Nano Banana
 
 The Nano Banana Tasks API can be used to query the results of the Nano Banana Images API. For information on how to use the Nano Banana Images API, please refer to the documentation [Nano Banana Images API](https://platform.acedata.cloud/documents/63e01dc3-eb21-499e-8049-3025c460058f).
 
-We will demonstrate how to use this API with an example task ID returned by the Nano Banana Images API. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, we will show how to pass in a task ID.
+We will demonstrate how to use this API with an example task ID returned by the Nano Banana Images API service. Suppose we have a task ID: 4d320ead-4af4-4a55-8f3e-f2afebdf4fd0, we will show how to pass in a task ID.
 
 ### Task Example Image
 
@@ -19,7 +19,7 @@ We will demonstrate how to use this API with an example task ID returned by the 
 **Request Headers** include:
 
 - `accept`: Specifies that the response should be in JSON format, set to `application/json`.
-- `authorization`: The API key for calling the API, which can be selected directly after application.
+- `authorization`: The key for calling the API, which can be selected directly after application.
 
 **Request Body** includes:
 
