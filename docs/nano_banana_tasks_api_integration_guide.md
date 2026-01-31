@@ -75,7 +75,7 @@ print(response.text)
 
 ### Response Example
 
-Upon successful request, the API will return the detailed information of the task here. For example:
+Upon successful request, the API will return the details of the task here. For example:
 
 ```json
 {
@@ -114,7 +114,7 @@ The returned result contains multiple fields, where the request field is the req
 
 ## Batch Query Operation
 
-This is for querying task details for multiple task IDs, and unlike the above, the action needs to be selected as `retrieve_batch`.
+This is for querying task details for multiple task IDs, differing from the above in that the action needs to be selected as `retrieve_batch`.
 
 **Request Body** includes:
 
@@ -136,7 +136,7 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/tasks' \
 
 ### Response Example
 
-Upon successful request, the API will return the specific details of all batch tasks this time. For example:
+Upon successful request, the API will return the specific details of all batch tasks. For example:
 
 ```json
 {
