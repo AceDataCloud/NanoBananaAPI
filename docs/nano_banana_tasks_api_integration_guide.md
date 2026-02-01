@@ -19,7 +19,7 @@ We will demonstrate how to use this API with an example task ID returned by the 
 **Request Headers** include:
 
 - `accept`: Specifies that the response should be in JSON format, set to `application/json`.
-- `authorization`: The key for calling the API, which can be selected directly after application.
+- `authorization`: The API key for calling the API, which can be selected directly after application.
 
 **Request Body** includes:
 
@@ -32,7 +32,7 @@ Set as shown in the image below:
 
 ### Code Example
 
-You can see that various language codes have been automatically generated on the right side of the page, as shown in the image:
+It can be seen that various language codes have been automatically generated on the right side of the page, as shown in the image:
 
 <p><img src="https://cdn.acedata.cloud/r1u4vl.png" width="500" class="m-auto"></p>
 
@@ -75,7 +75,7 @@ print(response.text)
 
 ### Response Example
 
-Upon successful request, the API will return the details of the task here. For example:
+Upon successful request, the API will return the detailed information of the task here. For example:
 
 ```json
 {
@@ -114,7 +114,7 @@ The returned result contains multiple fields, where the request field is the req
 
 ## Batch Query Operation
 
-This is for querying task details for multiple task IDs, and unlike the above, the action needs to be selected as `retrieve_batch`.
+This is for querying task details for multiple task IDs, differing from the above in that the action needs to be selected as `retrieve_batch`.
 
 **Request Body** includes:
 
@@ -136,7 +136,7 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/tasks' \
 
 ### Response Example
 
-Upon successful request, the API will return the specific details of all batch tasks. For example:
+Upon successful request, the API will return the specific details of all batch tasks this time. For example:
 
 ```json
 {
@@ -172,9 +172,9 @@ Upon successful request, the API will return the specific details of all batch t
 }
 ```
 
-The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields mentioned above. The field information is as follows.
+The returned result contains multiple fields, where items include the specific details of the batch tasks, and the specific information of each task is the same as the fields above for querying a single task. The field information is as follows.
 
-- `items`: All specific details of the batch tasks. It is an array, and each element of the array has the same format as the return result of querying a single task.
+- `items`: All specific details of the batch tasks. It is an array, and each element of the array has the same format as the return result for querying a single task.
 - `count`: The number of tasks in this batch query.
 ## Error Handling
 
@@ -201,4 +201,4 @@ When calling the API, if an error occurs, the API will return the corresponding 
 
 ## Conclusion
 
-Through this document, you have learned how to use the Nano Banana Tasks API to query details of single or batch tasks. We hope this document helps you better integrate and use the API. If you have any questions, please feel free to contact our technical support team.
+Through this document, you have learned how to use the Nano Banana Tasks API to query details for single or batch tasks. We hope this document helps you better integrate and use the API. If you have any questions, please feel free to contact our technical support team.
