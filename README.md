@@ -1,6 +1,6 @@
 # Nano Banana Image Generation API
 
-Nano Banana AI image generation service offers functions such as image generation and image editing.
+Nano Banana AI image generation and editing service.
 
 API home page: [Ace Data Cloud - Nano Banana Image Generation](https://platform.acedata.cloud/services/44fa6ed2-1ad1-4c7e-a8bd-30002728c0d1)
 
