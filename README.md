@@ -21,9 +21,13 @@ Before use, please enter the [Nano Banana Images API](https://platform.acedata.c
 - **Request Headers**:
   - `accept: application/json`
   - `content-type: application/json`
-- **Actions**:
+- **Action**:
   - `generate`: Generate images based on text prompts
   - `edit`: Edit based on given images
+- **Model** (optional):
+  - `nano-banana` (default): Based on Gemini 2.5 Flash Image, fast speed, low cost
+  - `nano-banana-2`: Based on Gemini 3.1 Flash Image Preview, Pro-level quality + Flash speed
+  - `nano-banana-pro`: Based on Gemini 3 Pro Image Preview, highest quality
 - **Asynchronous Callback**: Optional, receive task completion notifications and results via `callback_url`
 
 ### Quick Start: Generate Image (`action=generate`)
