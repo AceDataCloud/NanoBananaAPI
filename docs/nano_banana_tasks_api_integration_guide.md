@@ -19,7 +19,7 @@ We will demonstrate how to use this API with an example task ID returned by the 
 **Request Headers** include:
 
 - `accept`: Specifies that the response should be in JSON format, set to `application/json`.
-- `authorization`: The API key for calling the API, which can be selected directly after application.
+- `authorization`: The key to call the API, which can be selected directly after application.
 
 **Request Body** includes:
 
@@ -108,7 +108,7 @@ Upon successful request, the API will return the detailed information of the tas
 
 The returned result contains multiple fields, where the request field is the request body when the task was initiated, and the response field is the response body returned after the task is completed. The field descriptions are as follows.
 
-- `id`: The ID of the generated task, used to uniquely identify this generation task.
+- `id`: The ID generated for this task, used to uniquely identify this generation task.
 - `request`: The request information in the task query.
 - `response`: The return information in the task query.
 
@@ -136,7 +136,7 @@ curl -X POST 'https://api.acedata.cloud/nano-banana/tasks' \
 
 ### Response Example
 
-Upon successful request, the API will return the specific details of all batch tasks. For example:
+Upon successful request, the API will return the specific details of all batch tasks this time. For example:
 
 ```json
 {
