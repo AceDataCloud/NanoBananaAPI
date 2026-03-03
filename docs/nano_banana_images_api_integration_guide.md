@@ -99,9 +99,9 @@ print(resp.json())
 
 ## Edit Image (`action=edit`)
 
-When you want to edit based on existing images, set `action` to `edit`, and pass the list of image URLs to be edited through `image_urls` (one or more), while providing a `prompt` describing the editing goal.
+When you want to edit based on an existing image, set `action` to `edit`, and pass the list of image URLs to be edited through `image_urls` (one or more), while providing a `prompt` describing the editing goal.
 
-For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be public accessible links using `https` or `http`, or they can be Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
+For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be publicly accessible links using `https` or `http`, or they can be Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
 ### Request Example (cURL)
 
@@ -169,7 +169,7 @@ print(resp.json())
 
 ## Asynchronous Callback (Optional, Recommended)
 
-Generating or editing may take some time. To avoid long connections occupying resources, it is recommended to use **Webhook Callback** via `callback_url`:
+Generating or editing may take some time. To avoid long connections consuming resources, it is recommended to use **Webhook Callback** via `callback_url`:
 
 1. Add `callback_url` in the request body, for example, your server's Webhook address (must be publicly accessible and support POST JSON).
 2. The API will **immediately return** a response containing `task_id` (or basic results).
