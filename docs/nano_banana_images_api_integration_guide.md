@@ -99,7 +99,7 @@ print(resp.json())
 
 ## Edit Image (`action=edit`)
 
-When you want to edit based on an existing image, set `action` to `edit`, and pass the list of image URLs to be edited through `image_urls` (one or more), while providing a `prompt` describing the editing goal.
+When you want to edit based on an existing image, set `action` to `edit`, and pass the list of image URLs to be edited through `image_urls` (1 or more), while providing a `prompt` describing the editing goal.
 
 For example, if we provide a photo of a person and a photo of a shirt, we can have the person wear that shirt by passing the image URLs and specifying the action as `edit`. The URLs can be public accessible links using `https` or `http`, or they can be Base64 encoded images, such as `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAVGCAMAAAA6u2FyAAADAFBMVEXq6uwdHCEeHyMdHS....`
 
