@@ -70,7 +70,7 @@ resp = requests.post(url, json=payload, headers=headers)
 print(resp.json())
 ```
 
-### Successful Return Example
+### Successful Response Example
 
 ```json
 {
@@ -145,7 +145,7 @@ resp = requests.post(url, json=payload, headers=headers)
 print(resp.json())
 ```
 
-### Successful Return Example
+### Successful Response Example
 
 ```json
 {
@@ -164,7 +164,7 @@ print(resp.json())
 ### Field Explanation
 
 - `image_urls[]`: List of URLs of images to be edited (must be publicly accessible). Multiple images can be passed, and the service will combine these materials with the `prompt` to complete the editing.
-- Other fields are the same as the "Generate Image" return.
+- Other fields are the same as the "Generate Image" response.
 ---
 
 ## Asynchronous Callback (Optional, Recommended)
