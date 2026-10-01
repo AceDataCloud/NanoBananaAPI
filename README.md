@@ -444,7 +444,7 @@ html.dark .gallery-caption p { color: var(--el-text-color-regular); }
 .nb-page .price-btn-out { background: var(--el-bg-color); color: var(--el-text-color-primary) !important; border: 1px solid var(--el-border-color-light); text-decoration: none !important; }
 .nb-page .price-btn-out:hover { background: var(--el-bg-color-page); text-decoration: none !important; }
 @media (max-width: 768px) {
- .price-grid { grid-template-columns: 1fr; }
+ .price-grid { grid-template-columns: minmax(0,1fr) !important; }
  .price-card-feat { transform: none; }
 }
 .faq-list { display: flex; flex-direction: column; }
@@ -660,6 +660,8 @@ html.dark .nb-page .btn-cta-light { color: #ffffff !important; }
 html.dark .nb-page .btn-cta-ghost { color: #94a3b8 !important; }
 html.dark .nb-page .btn-cta-ghost:hover { color: var(--el-text-color-primary) !important; }
 html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
+.nb-page .code-left,.nb-page .code-right{width:100%;max-width:100%;min-width:0}
+.nb-page .code-wrap{max-width:100%;min-width:0}
 </style><div class="nb-page"><section class="nb-hero">
  <div class="s-container-narrow">
  <div class="hero-badge">
@@ -671,7 +673,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  Generate <span>AI Images</span>
  </h1>
  <p class="hero-subtitle">
- Based on Google Gemini 2.5 Flash/3 Pro Image model, it achieves high-quality image generation and editing through a simple REST API. Supports various scenarios such as text-to-image, multi-image editing, virtual dressing, and product background change.
+ Powered by Google Gemini 2.5 Flash/3 Pro Image models, enabling high-quality image generation and editing through a simple REST API. Supports multiple scenarios including text-to-image, multi-image editing, virtual try-on, and product background replacement.
  </p>
  <div class="hero-actions">
  <a href="https://platform.acedata.cloud/documents/nano-banana-images" class="s-btn-primary">📄 View Documentation</a>
@@ -703,7 +705,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <div>
  <div class="stat-icon">📡</div>
  <div class="stat-val">2</div>
- <div class="stat-lbl">API Interfaces</div>
+ <div class="stat-lbl">API Endpoints</div>
  </div>
  <div>
  <div class="stat-icon">📐</div>
@@ -716,49 +718,49 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
 <section class="s-section s-bg-white">
  <div class="s-container-narrow">
  <div class="s-header">
- <h2>What is Nano Banana?</h2>
+ <h2>What Is Nano Banana?</h2>
  </div>
  <div class="s-section-body">
- <p><strong class="s-text-brand">Nano Banana</strong> is a unified API wrapper based on the Google Gemini image generation model. It simplifies and optimizes the Gemini 2.5 Flash Image and Gemini 3 Pro Image models, providing a more user-friendly interface and lower prices.</p>
- <p>Ace Data Cloud offers<strong class="s-text-dark">lower prices than the official</strong> (about 1/3 of the official price), while providing<strong class="s-text-brand">higher concurrency support</strong>, dedicated customer service, and 7×24 hours of stability guarantee. No need to deal with the complex configuration of Google Cloud, ready to use immediately.</p>
+ <p><strong class="s-text-brand">Nano Banana</strong> is a unified API wrapper based on Google Gemini image generation models. It simplifies and optimizes the Gemini 2.5 Flash Image and Gemini 3 Pro Image models, providing a more user-friendly interface and lower pricing.</p>
+ <p>Ace Data Cloud offers<strong class="s-text-dark">lower prices than the official service</strong> (approximately 1/3 of the official price), along with<strong class="s-text-brand">higher concurrency support</strong>, dedicated customer service, and 24/7 stability assurance. No need to handle complex Google Cloud configurations—ready to use out of the box.</p>
  </div>
  </div>
 </section><section class="s-section s-bg-gray">
  <div class="s-container">
  <div class="s-header">
- <h2>Core Capabilities of Nano Banana API</h2>
- <p>Text-to-image and multi-image editing, covering the complete workflow of image creation</p>
+ <h2>Core Capabilities of the Nano Banana API</h2>
+ <p>Text-to-image generation and multi-image editing, covering the complete image creation workflow</p>
  </div>
  <div class="features-grid">
  <div class="feat-card">
  <div class="feat-icon">✨</div>
- <h3>High-Quality Text-to-Image</h3>
- <p>Input detailed text descriptions (subject, atmosphere, lighting, lens) to generate professional-grade high-quality images. Suitable for brand visuals, product posters, cover images, and more.</p>
+ <h3>High-Quality Text-to-Image Generation</h3>
+ <p>Enter detailed text descriptions (subject, mood, lighting, camera) to generate professional-grade, high-quality images. Suitable for brand visuals, product posters, cover images, and more.</p>
  </div>
  <div class="feat-card">
  <div class="feat-icon">🔀</div>
- <h3>Multi-Image Collaborative Editing</h3>
- <p>Upload multiple images (e.g., portrait + clothing), and the AI will intelligently merge them. Supports advanced editing operations such as virtual try-ons, product placements, and scene compositions.</p>
+ <h3>Multi-Image Combined Editing</h3>
+ <p>Upload multiple images (such as a portrait + clothing), and AI will intelligently blend them. Supports advanced editing operations such as virtual try-on, product placement, and scene compositing.</p>
  </div>
  <div class="feat-card">
  <div class="feat-icon">👗</div>
- <h3>Virtual Dressing</h3>
- <p>Provide portrait photos and clothing PNGs to automatically complete the outfit effect. Very suitable for e-commerce clothing displays and quick expansion of live stream images.</p>
+ <h3>Virtual Outfit Change</h3>
+ <p>Provide a portrait photo and a clothing PNG to automatically create a dressed-up result. Ideal for e-commerce apparel displays and quickly expanding livestream image content.</p>
  </div>
  <div class="feat-card">
  <div class="feat-icon">🏠</div>
- <h3>Product Scene Replacement</h3>
- <p>Place white-background product images into real scenes (wooden table, grass, bathroom, office desk) to make detail pages richer and more lively.</p>
+ <h3>Product Background Replacement</h3>
+ <p>Place white-background product images into real scenes (wooden tables, grass, bathrooms, desks) to make product detail pages richer and more lifelike.</p>
  </div>
  <div class="feat-card">
  <div class="feat-icon">🎨</div>
  <h3>Attribute Replacement</h3>
- <p>Change materials, colors, styles. Change bags to leather, drinks to different flavors, shoes to different color schemes—making visual SKU experimentation easier.</p>
+ <p>Change materials, colors, and styles. Swap a bag to leather, a drink to another flavor, or shoes to a different colorway—making visual SKU experimentation easier.</p>
  </div>
  <div class="feat-card">
  <div class="feat-icon">⚡</div>
  <h3>Asynchronous Webhook</h3>
- <p>Set <code>callback_url</code> to automatically push results after task completion. No polling required, suitable for batch production scenarios.</p>
+ <p>Set <code>callback_url</code>, and results will be automatically pushed after the task is completed. No polling required, ideal for batch production scenarios.</p>
  </div>
  </div>
  </div>
@@ -766,40 +768,40 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
 <section class="s-section s-bg-white">
  <div class="s-container">
  <div class="s-header">
- <h2>AI Generated Work Showcase</h2>
- <p>The following images are all generated by the Nano Banana API—what you see is what you get</p>
+ <h2>AI-Generated Work Showcase</h2>
+ <p>The images below were actually generated by the Nano Banana API—what you see is what you get</p>
  </div>
  <div class="gallery-grid">
  <div class="gallery-item">
- <img src="https://cdn.acedata.cloud/d635720766.png" alt="White porcelain coffee cup, morning light windowsill" loading="lazy">
+ <img src="https://cdn.acedata.cloud/d635720766.png" alt="White porcelain coffee cup on a windowsill in morning light" loading="lazy">
  <div class="gallery-caption">
- <h4>Morning Light Coffee Cup</h4>
- <p>nano-banana · 3:2 · Text-to-Image</p>
+ <h4>Morning Coffee Cup</h4>
+ <p>nano-banana · 3:2 · Text-to-image</p>
  </div>
  </div>
  <div class="gallery-item">
  <img src="https://cdn.acedata.cloud/87f62c94a4.png" alt="Cyberpunk city skyline" loading="lazy">
  <div class="gallery-caption">
  <h4>Cyber City Skyline</h4>
- <p>nano-banana · 16:9 · Text-to-Image</p>
+ <p>nano-banana · 16:9 · Text-to-image</p>
  </div>
  </div>
  <div class="gallery-item">
  <img src="https://cdn.acedata.cloud/3d1ed0dc1f.png" alt="Luxury perfume product photography" loading="lazy">
  <div class="gallery-caption">
  <h4>Luxury Product Photography</h4>
- <p>nano-banana-pro · 1:1 · Text-to-Image</p>
+ <p>nano-banana-pro · 1:1 · Text-to-image</p>
  </div>
  </div>
  <div class="gallery-item">
- <img src="https://cdn.acedata.cloud/8b86d640af.png" alt="Golden retriever puppy sunflower" loading="lazy">
+ <img src="https://cdn.acedata.cloud/8b86d640af.png" alt="Golden retriever puppy with sunflowers" loading="lazy">
  <div class="gallery-caption">
  <h4>Golden Retriever Puppy in the Sun</h4>
- <p>nano-banana · 3:4 · Text-to-Image</p>
+ <p>nano-banana · 3:4 · Text-to-image</p>
  </div>
  </div>
  </div>
- <p class="gallery-note">💡 All images are generated through a single API call, without any post-processing</p>
+ <p class="gallery-note">💡 All images were generated in a single API call, without any post-processing</p>
  </div>
 </section><section class="s-section s-bg-white">
  <div class="s-container">
@@ -815,7 +817,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
   -H "Content-Type: application/json" \
   -d '{
     "action": "generate",
-    "prompt": "White porcelain coffee cup, morning light on the windowsill, 85mm lens, shallow depth of field, soft highlights, healing and clean",
+    "prompt": "白瓷咖啡杯，晨光窗台，85mm镜头，浅景深，柔和高光，治愈干净",
     "model": "nano-banana",
     "aspect_ratio": "3:2"
   }'</pre>
@@ -838,28 +840,28 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  </div>
  </div>
  <div class="code-right">
- <h2>Quick Start - Get Started in 3 Minutes</h2>
- <p>Simplified REST API, using Bearer Token authentication. A single request can generate your first AI image.</p>
+ <h2>Quick Start—Get Started in 3 Minutes</h2>
+ <p>A simple REST API with Bearer Token authentication. Generate your first AI image with a single request.</p>
  <div class="explain-steps">
  <div class="explain-step">
  <div class="step-num">1</div>
  <div class="step-text">
- <h4>Get API Key</h4>
- <p>Register on Ace Data Cloud and obtain your Bearer Token from the console</p>
+ <h4>Get an API Key</h4>
+ <p>Register with Ace Data Cloud and get your Bearer Token from the console</p>
  </div>
  </div>
  <div class="explain-step">
  <div class="step-num">2</div>
  <div class="step-text">
- <h4>Send POST Request</h4>
- <p>Send a request to <code>/nano-banana/images</code> with the prompt and parameters</p>
+ <h4>Send a POST Request</h4>
+ <p>Send a request to <code>/nano-banana/images</code> with a prompt and parameters</p>
  </div>
  </div>
  <div class="explain-step">
  <div class="step-num">3</div>
  <div class="step-text">
- <h4>Get Image URL</h4>
- <p>Receive a permanently accessible image URL - ready for production use</p>
+ <h4>Get the Image URL</h4>
+ <p>Receive a permanently accessible image URL—ready for production use immediately</p>
  </div>
  </div>
  </div>
@@ -870,29 +872,29 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
 <section class="s-section s-bg-gray">
  <div class="s-container">
  <div class="s-header">
- <h2>Applicable Scenarios</h2>
- <p>From e-commerce content to brand creativity - Nano Banana can cover these scenarios</p>
+ <h2>Use Cases</h2>
+ <p>From e-commerce content to brand creativity—Nano Banana covers these scenarios</p>
  </div>
  <div class="usecases-grid">
  <div class="uc-card">
  <div class="uc-icon">👗</div>
- <h3>E-commerce Clothing</h3>
- <p>Influencers take a fixed photo once, and then use different clothing PNGs to batch generate "outfit images," quickly expanding store materials</p>
+ <h3>E-commerce Apparel</h3>
+ <p>Have an influencer take a single styled photo, then use different clothing PNGs to batch-generate outfit images and quickly expand your store assets</p>
  </div>
  <div class="uc-card">
  <div class="uc-icon">📦</div>
- <h3>Product Detail Page</h3>
- <p>A white background product image, composited with multiple scene images like wooden table/grass/bathroom, making the detail page richer and more persuasive</p>
+ <h3>Product Detail Pages</h3>
+ <p>Use a single product image on a white background to compose images in multiple settings such as wooden tables, grass, and bathrooms, making detail pages richer and more convincing</p>
  </div>
  <div class="uc-card">
  <div class="uc-icon">🎨</div>
  <h3>Brand Visuals</h3>
- <p>Quickly generate brand KV, event posters, cover images. Switch styles/holiday themes for the same main visual with one click</p>
+ <p>Quickly generate brand key visuals, campaign posters, and cover images. Switch the same key visual between styles and holiday themes with one click</p>
  </div>
  <div class="uc-card">
  <div class="uc-icon">🤖</div>
  <h3>AI Agent Integration</h3>
- <p>Integrate with Claude and ChatGPT through MCP Server or Dify plugin for natural language image generation</p>
+ <p>Integrate with Claude and ChatGPT through an MCP Server or Dify plugin to enable natural-language image generation</p>
  </div>
  </div>
  </div>
@@ -900,61 +902,61 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <div class="s-container">
  <div class="s-header">
  <h2>Advanced Features</h2>
- <p>Nano Banana is not just a simple text-to-image tool; it can also accomplish these advanced tasks</p>
+ <p>Nano Banana is more than simple text-to-image generation—it can also handle these advanced tasks</p>
  </div>
  <div class="actions-grid">
  <div class="act-card">
  <div class="act-icon">🎭</div>
- <h3>2D to 3D Figurine</h3>
- <p>Convert anime characters/portraits into commercial figurine models, displayed with packaging boxes</p>
+ <h3>2D to 3D Figurines</h3>
+ <p>Convert anime characters/portraits into commercialized figurine models, complete with packaging box displays</p>
  </div>
  <div class="act-card">
  <div class="act-icon">🔧</div>
- <h3>Product Exploded View</h3>
- <p>Show the internal structure of the product, with metal parts and electronic components decomposed and suspended, technical aesthetics</p>
+ <h3>Product Exploded Views</h3>
+ <p>Showcase a product's internal structure, with metal parts and electronic components separated and suspended for a technical aesthetic</p>
  </div>
  <div class="act-card">
  <div class="act-icon">📷</div>
  <h3>Old Photo Restoration</h3>
- <p>Restore scratched and damaged black-and-white old photos, enhance clarity and colorize naturally</p>
+ <p>Restore scratched and damaged old black-and-white photos, enhance clarity, and colorize them naturally</p>
  </div>
  <div class="act-card">
  <div class="act-icon">🚗</div>
- <h3>Diverse Group Image</h3>
- <p>Naturally blend multiple materials such as models, products, and backgrounds into a high-quality image</p>
+ <h3>Multi-Element Composites</h3>
+ <p>Naturally blend multiple assets such as models, products, and backgrounds into a single high-quality image</p>
  </div>
  </div>
  <div class="tag-row" style="margin-top: 24px;">
- <span class="tag-item">+ Multi-angle Shots</span>
- <span class="tag-item">+ Emoji Generation</span>
- <span class="tag-item">+ Sketch to Real Image</span>
- <span class="tag-item">+ Map to Real Scene</span>
+ <span class="tag-item">+ Multi-angle shots</span>
+ <span class="tag-item">+ Meme generation</span>
+ <span class="tag-item">+ Sketch to photorealistic image</span>
+ <span class="tag-item">+ Map to real-world scene</span>
  </div>
  </div>
 </section>
 <section class="s-section s-bg-gray">
  <div class="s-container">
  <div class="s-header">
- <h2>3 Steps to Get Started Quickly</h2>
+ <h2>Get Started in 3 Quick Steps</h2>
  <p>From registration to generating your first AI image, it takes less than 3 minutes</p>
  </div>
  <div class="steps-row">
  <div class="stp-card">
  <div class="stp-num">01</div>
- <h3>Register and Get API Key</h3>
+ <h3>Register and Get an API Key</h3>
  <p>Create a free account on Ace Data Cloud. Generate your Bearer Token from the API management console.</p>
  </div>
  <div class="stp-conn"></div>
  <div class="stp-card">
  <div class="stp-num">02</div>
- <h3>Initiate Your First API Call</h3>
- <p>Send a POST request with a text prompt to <code>/nano-banana/images</code>. You can use SDK, cURL, or any HTTP client.</p>
+ <h3>Make Your First API Call</h3>
+ <p>Send a POST request with a text prompt to <code>/nano-banana/images</code>. You can use an SDK, cURL, or any HTTP client.</p>
  </div>
  <div class="stp-conn"></div>
  <div class="stp-card">
  <div class="stp-num">03</div>
- <h3>Integration and Expansion</h3>
- <p>Embed the API into your application. Use Webhook for asynchronous processing, confidently expand to production environments.</p>
+ <h3>Integrate and Scale</h3>
+ <p>Embed the API into your application. Use Webhooks for asynchronous processing and scale confidently to production.</p>
  </div>
  </div>
  <div class="steps-cta">
@@ -979,23 +981,23 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <tbody>
  <tr>
  <td>Price</td>
- <td class="cmp-us"><strong>As low as $0.0133 / time</strong></td>
+ <td class="cmp-us"><strong>As low as $0.0133 / request</strong></td>
  <td>$0.039 Interactive / $0.02 Batch</td>
  </tr>
  <tr>
- <td>Activation Threshold</td>
- <td class="cmp-us"><span class="ck">✓</span> Ready to use</td>
- <td><span class="cx">✗</span> Requires Google Cloud configuration</td>
+ <td>Setup Requirements</td>
+ <td class="cmp-us"><span class="ck">✓</span> Ready to use instantly</td>
+ <td><span class="cx">✗</span> Google Cloud configuration required</td>
  </tr>
  <tr>
- <td>Concurrent Support</td>
- <td class="cmp-us"><span class="ck">✓</span> High concurrency guarantee</td>
- <td><span class="cx">✗</span> Default quota is low</td>
+ <td>Concurrency Support</td>
+ <td class="cmp-us"><span class="ck">✓</span> High-concurrency guarantee</td>
+ <td><span class="cx">✗</span> Low default quota</td>
  </tr>
  <tr>
- <td>Webhook Callback</td>
+ <td>Webhook Callbacks</td>
  <td class="cmp-us"><span class="ck">✓</span></td>
- <td>Partial support</td>
+ <td>Partially supported</td>
  </tr>
  <tr>
  <td>Task Polling</td>
@@ -1013,14 +1015,14 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <td><span class="cx">✗</span></td>
  </tr>
  <tr>
- <td>Dedicated Customer Service</td>
+ <td>Dedicated Customer Support</td>
  <td class="cmp-us"><span class="ck">✓</span></td>
  <td><span class="cx">✗</span></td>
  </tr>
  <tr>
- <td>7×24 Monitoring</td>
+ <td>24/7 Monitoring</td>
  <td class="cmp-us"><span class="ck">✓</span></td>
- <td>Partial support</td>
+ <td>Partially supported</td>
  </tr>
  </tbody>
  </table>
@@ -1030,7 +1032,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <div class="s-container">
  <div class="s-header">
  <h2>Which model is right for you?</h2>
- <p>Choose the right model based on your needs for quality and speed</p>
+ <p>Choose the right model based on your quality and speed needs</p>
  </div>
  <div class="models-grid">
  <div class="mdl-card mdl-rec">
@@ -1039,12 +1041,12 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <h3>nano-banana</h3>
  <span class="mdl-tag-blue mdl-tag">Fast</span>
  </div>
- <p class="mdl-desc">Based on Gemini 2.5 Flash Image. Faster generation speed, lower cost, suitable for bulk content production and prototype validation.</p>
+ <p class="mdl-desc">Based on Gemini 2.5 Flash Image. Faster generation speeds and lower costs, ideal for batch content production and prototype validation.</p>
  <ul class="mdl-feats">
- <li>✓ Faster response time</li>
+ <li>✓ Faster response times</li>
  <li>✓ As low as $0.0133 / call</li>
  <li>✓ 7 aspect ratios</li>
- <li>✓ Suitable for high-frequency scenarios</li>
+ <li>✓ Ideal for high-frequency scenarios</li>
  </ul>
  </div>
  <div class="mdl-card">
@@ -1052,12 +1054,12 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <h3>nano-banana-2-lite</h3>
  <span class="mdl-tag-green mdl-tag">Lightweight</span>
  </div>
- <p class="mdl-desc">Based on Gemini 3.1 Flash Lite Image. Supports only 1K resolution, 3-5 seconds fast output.</p>
+ <p class="mdl-desc">Based on Gemini 3.1 Flash Lite Image. Supports 1K resolution only, with fast image generation in 3-5 seconds.</p>
  <ul class="mdl-feats">
  <li>✓ Gemini 3.1 lightweight model</li>
  <li>✓ As low as $0.0133 / call</li>
- <li>✓ Supports only 1K resolution</li>
- <li>✓ Suitable for quick validation</li>
+ <li>✓ Supports 1K resolution only</li>
+ <li>✓ Ideal for rapid validation</li>
  </ul>
  </div>
  <div class="mdl-card mdl-rec">
@@ -1066,12 +1068,12 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <h3>nano-banana-2</h3>
  <span class="mdl-tag-green mdl-tag">Balanced</span>
  </div>
- <p class="mdl-desc">Based on Gemini 3.1 Flash Image. Pro-level quality + Flash speed, cost-effective choice.</p>
+ <p class="mdl-desc">Based on Gemini 3.1 Flash Image. Pro-level quality + Flash speed, a great value choice.</p>
  <ul class="mdl-feats">
  <li>✓ Pro-level image quality</li>
  <li>✓ Flash-level response speed</li>
  <li>✓ As low as $0.0267 / call</li>
- <li>✓ Suitable for most scenarios</li>
+ <li>✓ Ideal for most scenarios</li>
  </ul>
  </div>
  <div class="mdl-card">
@@ -1079,12 +1081,12 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <h3>nano-banana-pro</h3>
  <span class="mdl-tag-purple mdl-tag">High Quality</span>
  </div>
- <p class="mdl-desc">Based on Gemini 3 Pro Image. Highest quality output, supports 2K/4K resolution. Suitable for flagship products and high-demand scenarios.</p>
+ <p class="mdl-desc">Based on Gemini 3 Pro Image. Highest-quality output with support for 2K/4K resolution. Ideal for flagship products and demanding scenarios.</p>
  <ul class="mdl-feats">
  <li>✓ Highest image quality</li>
  <li>✓ As low as $0.0333 / call</li>
  <li>✓ Supports 1K/2K/4K resolution</li>
- <li>✓ Suitable for brand visuals</li>
+ <li>✓ Ideal for brand visuals</li>
  </ul>
  </div>
  </div>
@@ -1097,32 +1099,32 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  </div>
  <div class="price-grid">
  <div class="price-card price-card-feat">
- <div class="price-feat-badge">Pay-as-you-go</div>
+ <div class="price-feat-badge">Pay as you go</div>
  <div class="price-tier">Standard</div>
  <div>
  <span class="price-amt">$0.0133</span>
  <span class="price-per"> / call</span>
  </div>
- <p class="price-desc">nano-banana model (Gemini 2.5 Flash Image)<br>Up to 27% discount on bulk packages</p>
+ <p class="price-desc">nano-banana model (Gemini 2.5 Flash Image)<br>Save up to 27% with volume packages</p>
  <ul class="price-feats">
- <li><span class="price-ck">✓</span> Generate</li>
- <li><span class="price-ck">✓</span> Edit</li>
+ <li><span class="price-ck">✓</span> Text-to-image (Generate)</li>
+ <li><span class="price-ck">✓</span> Multi-image editing (Edit)</li>
  <li><span class="price-ck">✓</span> 7 aspect ratios</li>
- <li><span class="price-ck">✓</span> Webhook callback</li>
- <li><span class="price-ck">✓</span> Task polling——<strong>Free</strong></li>
+ <li><span class="price-ck">✓</span> Webhook callbacks</li>
+ <li><span class="price-ck">✓</span> Task polling—<strong>Free</strong></li>
  <li><span class="price-ck">✓</span> nano-banana-2-lite: as low as $0.0133 / call</li>
  <li><span class="price-ck">✓</span> nano-banana-2: as low as $0.0267 / call</li>
  <li><span class="price-ck">✓</span> nano-banana-pro: as low as $0.0333 / call</li>
  </ul>
- <a href="https://platform.acedata.cloud/services/nano-banana?tab=pricing" class="price-btn price-btn-fill">View Pricing Details</a>
- <a href="https://platform.acedata.cloud/documents/nano-banana-images" class="price-btn price-btn-out" style="margin-top:8px">View API Documentation</a>
+ <a href="https://platform.acedata.cloud/services/nano-banana?tab=pricing" class="price-btn price-btn-fill">View pricing details</a>
+ <a href="https://platform.acedata.cloud/documents/nano-banana-images" class="price-btn price-btn-out" style="margin-top:8px">View API documentation</a>
  </div>
  <div class="price-card">
  <div class="price-tier">Enterprise</div>
  <div>
  <span class="price-amt">Custom</span>
  </div>
- <p class="price-desc">Bulk discounts for high-usage teams</p>
+ <p class="price-desc">Volume discounts for high-usage teams</p>
  <ul class="price-feats">
  <li><span class="price-ck">✓</span> Usage-based discounts</li>
  <li><span class="price-ck">✓</span> Priority support</li>
@@ -1130,7 +1132,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <li><span class="price-ck">✓</span> Custom rate limits</li>
  <li><span class="price-ck">✓</span> SLA guarantee</li>
  </ul>
- <a href="https://platform.acedata.cloud/support" class="price-btn price-btn-out">Contact Sales</a>
+ <a href="https://platform.acedata.cloud/support" class="price-btn price-btn-out">Contact sales</a>
  </div>
  </div>
  </div>
@@ -1146,16 +1148,16 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Nano Banana is an alias wrapper for the Google Gemini image generation model. nano-banana corresponds to Gemini 2.5 Flash Image, nano-banana-2-lite corresponds to Gemini 3.1 Flash Lite Image (only 1K, fast image generation), nano-banana-2 corresponds to Gemini 3.1 Flash Image (Pro level quality + Flash speed), and nano-banana-pro corresponds to Gemini 3 Pro Image. We provide a more streamlined interface and lower prices.</p>
+ <p>Nano Banana is an alias wrapper for Google Gemini image generation models. nano-banana corresponds to Gemini 2.5 Flash Image, nano-banana-2-lite corresponds to Gemini 3.1 Flash Lite Image (1K only, fast image generation), nano-banana-2 corresponds to Gemini 3.1 Flash Image (Pro-level quality + Flash speed), and nano-banana-pro corresponds to Gemini 3 Pro Image. We provide a simpler interface and lower prices.</p>
  </div>
  </details>
  <details class="faq-item">
  <summary class="faq-q">
- <span>What is the pricing model?</span>
+ <span>How does pricing work?</span>
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Pay-as-you-go, no subscription fees. The nano-banana and nano-banana-2-lite models start at $0.0133 per use, the nano-banana-2 model starts at $0.0267 per use, and the nano-banana-pro model starts at $0.0333 per use. Task status polling is free forever. Bulk packages can enjoy up to a 27% discount.</p>
+ <p>Pay as you go, with no subscription fee. nano-banana and nano-banana-2-lite models start at $0.0133/request, nano-banana-2 models start at $0.0267/request, and nano-banana-pro models start at $0.0333/request. Task status polling is always free. Bulk packages offer discounts of up to 27%.</p>
  </div>
  </details>
  <details class="faq-item">
@@ -1164,16 +1166,16 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Two operation modes: Generate (text to image) and Edit (multi-image editing). Generate supports 7 aspect ratios (1:1, 3:2, 2:3, 16:9, 9:16, 4:3, 3:4), and the Pro model also supports 1K/2K/4K resolution options. The Edit mode supports uploading up to 10 images for joint editing.</p>
+ <p>Two operation modes: Generate (text-to-image) and Edit (multi-image editing). Generate supports 7 aspect ratios (1:1, 3:2, 2:3, 16:9, 9:16, 4:3, 3:4), and Pro models also support 1K/2K/4K resolution options. Edit mode supports uploading up to 10 images for combined editing.</p>
  </div>
  </details>
  <details class="faq-item">
  <summary class="faq-q">
- <span>How to handle longer generation times?</span>
+ <span>How should I handle longer generation times?</span>
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Two methods: (1) Use callback_url—set the Webhook URL, and we will POST the results upon completion. (2) Poll through /nano-banana/tasks—this interface is free and allows you to check the status at any time.</p>
+ <p>Two methods: (1) Use callback_url—set a Webhook URL, and we will POST the result when complete. (2) Poll via /nano-banana/tasks—this endpoint is free, and you can check the status at any time.</p>
  </div>
  </details>
  <details class="faq-item">
@@ -1182,7 +1184,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Yes. The returned image_url is stored on our CDN, accessible permanently, and can be used directly in production environments.</p>
+ <p>Yes. The returned image_url is stored on our CDN and is permanently accessible, so it can be used directly in production environments.</p>
  </div>
  </details>
  <details class="faq-item">
@@ -1191,25 +1193,25 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Yes! We provide the MCP Server (mcp-nano-banana) and Dify plugin, which can be directly integrated with Claude Desktop, VS Code, and Dify workflows. Your AI Agent can generate and edit images through natural language.</p>
+ <p>Yes! We provide an MCP Server (mcp-nano-banana) and a Dify plugin, which can integrate directly with Claude Desktop, VS Code, and Dify workflows. Your AI Agent can generate and edit images through natural language.</p>
  </div>
  </details>
  <details class="faq-item">
  <summary class="faq-q">
- <span>How to write a good prompt?</span>
+ <span>How do I write a good Prompt?</span>
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Recommended structure: Subject + Atmosphere + Lighting + Lens + Texture keywords. For example: "White porcelain coffee cup, morning light on the windowsill, 85mm portrait lens, shallow depth of field, soft highlights, healing, clean, leisurely". The more specific the description, the better the generation effect.</p>
+ <p>Recommended structure: subject + atmosphere + lighting + lens + texture keywords. For example: "white porcelain coffee cup, morning-light windowsill, 85mm portrait lens, shallow depth of field, soft highlights, soothing, clean, relaxed." The more specific the description, the better the generated result.</p>
  </div>
  </details>
  <details class="faq-item">
  <summary class="faq-q">
- <span>What should be noted in Edit mode?</span>
+ <span>What should I keep in mind for Edit mode?</span>
  <span class="faq-chev">▾</span>
  </summary>
  <div class="faq-a">
- <p>Edit mode requires passing in 1-10 images through the image_urls parameter (HTTP/HTTPS URL or Base64). Each image can be a maximum of 10MB. The prompt needs to describe how to handle these images, for example, "Make this person wear this T-shirt".</p>
+ <p>Edit mode requires passing 1-10 images through the image_urls parameter (HTTP/HTTPS URL or Base64). Each image can be up to 10MB. The Prompt needs to describe how to process these images, for example, "make this person wear this T-shirt."</p>
  </div>
  </details>
  </div>
@@ -1217,7 +1219,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <div class="s-container">
  <div class="s-header">
  <h2>Other AI Models</h2>
- <p>Explore our complete AI API suite, covering fields such as images, videos, music, and more</p>
+ <p>Explore our complete AI API suite, covering images, videos, music, and more</p>
  </div>
  <div class="rel-grid">
  <a href="https://platform.acedata.cloud/services/seedream" class="rel-card">
@@ -1232,7 +1234,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <div class="rel-icon">✨</div>
  <div class="rel-info">
  <h3>Flux API</h3>
- <p>Fast AI image generation, supporting various styles and models</p>
+ <p>Fast AI image generation with support for multiple styles and models</p>
  </div>
  <span class="rel-arrow">→</span>
  </a>
@@ -1248,7 +1250,7 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
  <div class="rel-icon">🎵</div>
  <div class="rel-info">
  <h3>Suno API</h3>
- <p>AI music generation—generate complete songs, covers, and instrumental music</p>
+ <p>AI music generation—create full songs, covers, and instrumental music</p>
  </div>
  <span class="rel-arrow">→</span>
  </a>
@@ -1257,8 +1259,8 @@ html.dark .nb-page .price-btn-fill { color: #ffffff !important; }
 </section>
 <section class="nb-cta">
  <div class="s-container-narrow">
- <h2>Start generating AI images now</h2>
- <p>As low as $0.0133 per call—lower prices than the official, a simpler interface, and higher concurrency support. Pay as you go—no subscription fees, no commitments.</p>
+ <h2>Start Generating AI Images Now</h2>
+ <p>As low as $0.0133 per call—lower prices than the official service, a simpler interface, and higher concurrency support. Pay as you go—no subscription fees, no commitments.</p>
  <div class="cta-actions">
  <a href="https://platform.acedata.cloud/documents/nano-banana-images" class="btn-cta-light">📄 View Documentation →</a>
  </div>
